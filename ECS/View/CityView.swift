@@ -57,7 +57,7 @@ struct CityView: View {
             {
                 RoundedRectangle(cornerRadius: 70, style: .continuous)
                     .fill(.white)
-                    .frame(width: 480, height: 550)
+                    .frame(width: 480, height: 500)
             }
             if colorScheme == .dark
             {
@@ -85,14 +85,14 @@ struct CityView: View {
                                     Image("Napoli")
                                         .resizable()
                                         .cornerRadius(30)
-                                        .frame(width: 400, height: 200)
+                                        .frame(width: 360, height: 200)
                                         .opacity(0.85)
                                     
                                     //Sh
                                     Text(storeNation.nations[0].city[0].quests[index].title)
                                         .foregroundColor(.black)
                                         .bold()
-                                        .position(x: 200,y: 30)
+                                        .position(x: 180,y: 30)
                                     
                                     HStack(spacing: 20)
                                     {
