@@ -20,7 +20,7 @@
 		A795867F296D7211009EABB1 /* ECSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795867E296D7211009EABB1 /* ECSTests.swift */; };
 		A7958689296D7211009EABB1 /* ECSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958688296D7211009EABB1 /* ECSUITests.swift */; };
 		A795868B296D7211009EABB1 /* ECSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795868A296D7211009EABB1 /* ECSUITestsLaunchTests.swift */; };
-		A7958698296D721A009EABB1 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958697296D721A009EABB1 /* CalendarView.swift */; };
+		A7958698296D721A009EABB1 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958697296D721A009EABB1 /* CityView.swift */; };
 		A795869A296D725A009EABB1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958699296D725A009EABB1 /* SplashScreenView.swift */; };
 		A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +59,7 @@
 		A7958684296D7211009EABB1 /* ECSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7958688296D7211009EABB1 /* ECSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECSUITests.swift; sourceTree = "<group>"; };
 		A795868A296D7211009EABB1 /* ECSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A7958697296D721A009EABB1 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		A7958697296D721A009EABB1 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		A7958699296D725A009EABB1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAPIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A795866F296D7211009EABB1 /* ContentView.swift */,
-				A7958697296D721A009EABB1 /* CalendarView.swift */,
+				A7958697296D721A009EABB1 /* CityView.swift */,
 				A735ED3B2970B6C7000EE311 /* QuestDetailsView.swift */,
 				A7958699296D725A009EABB1 /* SplashScreenView.swift */,
 				A735ED39297055C3000EE311 /* UserView.swift */,
@@ -344,7 +344,7 @@
 				A7958670296D7211009EABB1 /* ContentView.swift in Sources */,
 				A795866E296D7211009EABB1 /* ECSApp.swift in Sources */,
 				8351857F2970990F004CC2BC /* User.swift in Sources */,
-				A7958698296D721A009EABB1 /* CalendarView.swift in Sources */,
+				A7958698296D721A009EABB1 /* CityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

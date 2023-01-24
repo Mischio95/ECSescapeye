@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalendarView: View {
+struct CityView: View {
     @ObservedObject var storeNation =  StoreData()
     @Environment(\.colorScheme) var colorScheme
     var currentCity: City
@@ -37,14 +37,14 @@ struct CalendarView: View {
                 Text("NoLoad")
             }
             
-            Button {
-                Task {
-                    await countries.getNation()
-                }
-                
-            } label: {
-                buttonLabel(with: "Request",and: .accentColor)
-            }
+//            Button {
+//                Task {
+//                    await countries.getNation()
+//                }
+//
+//            } label: {
+//                buttonLabel(with: "Request",and: .accentColor)
+//            }
         }
     }
     
@@ -113,21 +113,21 @@ struct CalendarView: View {
         }
     }
     
-    @ViewBuilder
-    func buttonLabel(with text: String, and color: Color) -> some View {
-        ZStack{
-            RoundedRectangle(cornerRadius: 20)
-                .frame(height: 100)
-                .foregroundColor(color)
-            Text(text)
-                .foregroundColor(.white)
-        }
-    }
+//    @ViewBuilder
+//    func buttonLabel(with text: String, and color: Color) -> some View {
+//        ZStack{
+//            RoundedRectangle(cornerRadius: 20)
+//                .frame(height: 100)
+//                .foregroundColor(color)
+//            Text(text)
+//                .foregroundColor(.white)
+//        }
+//    }
 }
 
-struct CalendarView_Previews: PreviewProvider {
+struct CityView_Previews: PreviewProvider {
     static var previews: some View {
         var city = City(name: "Napoli", description: "", background: "Napoli", quests: [])
-        CalendarView(storeNation: StoreData(), currentCity: city, countries: CountriesData())
+        CityView(storeNation: StoreData(), currentCity: city, countries: CountriesData())
     }
 }

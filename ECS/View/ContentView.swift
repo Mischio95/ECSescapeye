@@ -14,11 +14,13 @@ struct ContentView: View {
     var body: some View {
         TabView
         {
-            CalendarView(storeNation: storeNation,currentCity: storeNation.nations[0].city[0], countries: countries)
+            CityView(storeNation: storeNation,currentCity: storeNation.nations[0].city[0], countries: countries)
                 .tabItem
             {
                 Image(systemName: "house")
                 Text("City")
+            }.task {
+                await countries.getNation()
             }
             
             UserView(storeNation: storeNation)
