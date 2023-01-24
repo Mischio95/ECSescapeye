@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @ObservedObject var storeNation = StoreData()
     @ObservedObject var countries = CountriesData()
+    
     var body: some View {
         TabView
         {
@@ -28,11 +29,6 @@ struct ContentView: View {
             {
                 Label("User", systemImage: "person")
             }
-//            CalendarView(storeNation: storeNation)
-//                .tabItem
-//            {
-//                Label("", systemImage: "person")
-//            }
         }
     }
 }

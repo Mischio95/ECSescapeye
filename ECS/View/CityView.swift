@@ -71,7 +71,7 @@ struct CityView: View {
             {
                 ScrollView(showsIndicators: false)
                 {
-                    Spacer(minLength: 50)
+                    Spacer(minLength: 05)
                     VStack(spacing: 40)
                     {
                         //ShowAllCities()
