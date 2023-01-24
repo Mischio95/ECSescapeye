@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8351857F2970990F004CC2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351857E2970990F004CC2BC /* User.swift */; };
+		83725498297FED4600B5E815 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83725497297FED4600B5E815 /* DataController.swift */; };
+		8372549C297FEDEA00B5E815 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8372549A297FEDEA00B5E815 /* UserModel.xcdatamodeld */; };
 		83AFD3DC296EC8970099D47B /* Naciest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DB296EC8970099D47B /* Naciest.swift */; };
 		83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DF296ECD940099D47B /* Utilities.swift */; };
 		83AFD3E3296ED5E30099D47B /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3E2296ED5E30099D47B /* CityViewModel.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		8351857E2970990F004CC2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		83725497297FED4600B5E815 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		8372549B297FEDEA00B5E815 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		83AFD3DB296EC8970099D47B /* Naciest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Naciest.swift; path = ECS/Model/Naciest.swift; sourceTree = SOURCE_ROOT; };
 		83AFD3DF296ECD940099D47B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		83AFD3E2296ED5E30099D47B /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
@@ -89,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83725496297FECBE00B5E815 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				83725497297FED4600B5E815 /* DataController.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		83725499297FEDD100B5E815 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				8372549A297FEDEA00B5E815 /* UserModel.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		83AFD3E1296ED5CC0099D47B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +141,8 @@
 		A795866C296D7211009EABB1 /* ECS */ = {
 			isa = PBXGroup;
 			children = (
+				83725499297FEDD100B5E815 /* DataModel */,
+				83725496297FECBE00B5E815 /* Manager */,
 				A795866D296D7211009EABB1 /* ECSApp.swift */,
 				83AFD3E1296ED5CC0099D47B /* ViewModel */,
 				A795869C296D75B7009EABB1 /* Model */,
@@ -335,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83AFD3DC296EC8970099D47B /* Naciest.swift in Sources */,
+				83725498297FED4600B5E815 /* DataController.swift in Sources */,
 				A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */,
 				83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */,
 				A735ED3C2970B6C7000EE311 /* QuestDetailsView.swift in Sources */,
@@ -344,6 +367,7 @@
 				A7958670296D7211009EABB1 /* ContentView.swift in Sources */,
 				A795866E296D7211009EABB1 /* ECSApp.swift in Sources */,
 				8351857F2970990F004CC2BC /* User.swift in Sources */,
+				8372549C297FEDEA00B5E815 /* UserModel.xcdatamodeld in Sources */,
 				A7958698296D721A009EABB1 /* CityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8372549A297FEDEA00B5E815 /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8372549B297FEDEA00B5E815 /* UserModel.xcdatamodel */,
+			);
+			currentVersion = 8372549B297FEDEA00B5E815 /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A7958662296D7210009EABB1 /* Project object */;
 }

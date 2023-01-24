@@ -10,15 +10,36 @@ import SwiftUI
 struct UserView: View {
     
     @ObservedObject var storeNation = StoreData()
+    var dataController: DataController
+    @FetchRequest(sortDescriptors: []) var user: FetchedResults<User>
+    @Environment(\.managedObjectContext) var moc
     
     
     var body: some View {
-        Text("ciccio bello")
+        
+        VStack
+        {
+            List(user)
+            { users in
+                Text(users.username ?? "")
+            }
+            
+            
+            Button("Add") {
+                let username = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
+                let chosenFirstName = username.randomElement()!
+                let users = User(context: moc)
+                users.username = "\(username) \(chosenFirstName)"
+                
+                try? moc.save()
+            }
+            Text("ciccio bello")
+        }
     }
 }
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(storeNation: StoreData())
+        UserView(storeNation: StoreData(),dataController: DataController())
     }
 }

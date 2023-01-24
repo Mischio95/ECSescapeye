@@ -11,11 +11,11 @@ struct SplashScreenView: View {
     
     @State var animate = false
     @State var end = false
-    
+    var dataController: DataController
     var body: some View {
         ZStack
         {
-            ContentView()
+            ContentView(dataController: dataController)
             ZStack
             {
                 Image("Splash")
@@ -56,7 +56,7 @@ struct SplashScreenView: View {
     
     struct SplashScreenView_Previews: PreviewProvider {
         static var previews: some View {
-            SplashScreenView()
+            SplashScreenView(dataController: DataController())
         }
     }
 }

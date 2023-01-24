@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @ObservedObject var storeNation = StoreData()
     @ObservedObject var countries = CountriesData()
+    var dataController: DataController
     
     var body: some View {
         TabView
@@ -20,22 +21,21 @@ struct ContentView: View {
             {
                 Image(systemName: "house")
                 Text("City")
-            }.task {
-                await countries.getNation()
             }
             
-            UserView(storeNation: storeNation)
+            UserView(storeNation: storeNation, dataController: dataController)
                 .tabItem
             {
                 Label("User", systemImage: "person")
             }
         }
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View
     {
-        ContentView(storeNation: StoreData())
+        ContentView(storeNation: StoreData(), dataController: DataController())
     }
 }
