@@ -13,12 +13,24 @@ struct RegistrationView: View {
     @ObservedObject var storeNation = StoreData()
     @FetchRequest(sortDescriptors: []) var user: FetchedResults<User>
     @Environment(\.managedObjectContext) var moc
+    @State var username = ""
+    @State var password = ""
+    
+    
     
     var body: some View {
         
         // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
         VStack
         {
+            TextField(
+                "Username",
+                text: $username
+            )
+            TextField(
+                "Password",
+                text: $password
+            )
             NavigationView
             {
                 List(user)
@@ -35,17 +47,29 @@ struct RegistrationView: View {
             }
             
             HStack(spacing: 30){
+                
                 Button("Add") {
-                    let username = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-                    let chosenFirstName = username.randomElement()!
                     let users = User(context: moc)
-                    users.username = "\(chosenFirstName)"
+                    if(username != "" && password != "")
+                    {
+                       
+                        users.username = username
+                        users.password = password
+                        try? moc.save()
+                        
+                    }
+                   
+//                    let chosenFirstName = username.randomElement()!
+//                    let users = User(context: moc)
+//                    users.username = "\(chosenFirstName)"
                     
-                    try? moc.save()
+//                    try? moc.save()
                 
                 }
+                
             }
-        }
+            
+        }.padding(30)
     }
     
     private func deleteItems(offsets: IndexSet) {
