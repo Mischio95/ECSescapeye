@@ -15,6 +15,7 @@ struct RegistrationView: View {
     @Environment(\.managedObjectContext) var moc
     @State var username = ""
     @State var password = ""
+    var test: String = "Ciao"
     
     
     
@@ -56,8 +57,9 @@ struct RegistrationView: View {
                         users.username = username
                         users.password = password
                         try? moc.save()
-                        
+                        print(user)
                     }
+                    
                    
 //                    let chosenFirstName = username.randomElement()!
 //                    let users = User(context: moc)
@@ -68,8 +70,8 @@ struct RegistrationView: View {
                 }
                 
             }
-            
         }.padding(30)
+        
     }
     
     private func deleteItems(offsets: IndexSet) {
