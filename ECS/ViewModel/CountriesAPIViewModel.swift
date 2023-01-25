@@ -36,10 +36,6 @@ class CountriesData: ObservableObject
             request.httpMethod = "GET"
             request.setValue(token, forHTTPHeaderField: "X-Api-Key")
 
-
-//            request.httpMethod = "GET"
-
-
             let (data, response) = try await  URLSession.shared.data(for: request)
 
             print(String(data: data, encoding: .utf8))

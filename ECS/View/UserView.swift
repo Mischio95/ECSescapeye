@@ -19,21 +19,22 @@ struct UserView: View {
         
         VStack
         {
-            List(user)
-            { users in
-                Text(users.username ?? "")
-            }
+//            List(user)
+//            { users in
+//                Text(users.username ?? "")
+//            }
+//
+//
+//            Button("Add") {
+//                let username = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
+//                let chosenFirstName = username.randomElement()!
+//                let users = User(context: moc)
+//                users.username = "\(chosenFirstName)"
+//
+//                try? moc.save()
+//            }
             
-            
-            Button("Add") {
-                let username = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-                let chosenFirstName = username.randomElement()!
-                let users = User(context: moc)
-                users.username = "\(username) \(chosenFirstName)"
-                
-                try? moc.save()
-            }
-            Text("ciccio bello")
+            Text("CiccioBello")
         }
     }
 }

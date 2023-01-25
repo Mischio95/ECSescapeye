@@ -15,7 +15,7 @@ struct SplashScreenView: View {
     var body: some View {
         ZStack
         {
-            ContentView(dataController: dataController)
+            RegistrationView(dataController: dataController)
             ZStack
             {
                 Image("Splash")

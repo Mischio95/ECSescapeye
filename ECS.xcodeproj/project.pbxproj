@@ -25,6 +25,7 @@
 		A7958698296D721A009EABB1 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958697296D721A009EABB1 /* CityView.swift */; };
 		A795869A296D725A009EABB1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958699296D725A009EABB1 /* SplashScreenView.swift */; };
 		A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */; };
+		A7E3239C298025F2003745BD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E3239B298025F2003745BD /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		A7958697296D721A009EABB1 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		A7958699296D725A009EABB1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAPIViewModel.swift; sourceTree = "<group>"; };
+		A7E3239B298025F2003745BD /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,11 +183,12 @@
 		A795869B296D7558009EABB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7958699296D725A009EABB1 /* SplashScreenView.swift */,
+				A7E3239B298025F2003745BD /* RegistrationView.swift */,
 				A795866F296D7211009EABB1 /* ContentView.swift */,
 				A7958697296D721A009EABB1 /* CityView.swift */,
-				A735ED3B2970B6C7000EE311 /* QuestDetailsView.swift */,
-				A7958699296D725A009EABB1 /* SplashScreenView.swift */,
 				A735ED39297055C3000EE311 /* UserView.swift */,
+				A735ED3B2970B6C7000EE311 /* QuestDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				83AFD3DC296EC8970099D47B /* Naciest.swift in Sources */,
 				83725498297FED4600B5E815 /* DataController.swift in Sources */,
 				A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */,
+				A7E3239C298025F2003745BD /* RegistrationView.swift in Sources */,
 				83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */,
 				A735ED3C2970B6C7000EE311 /* QuestDetailsView.swift in Sources */,
 				83AFD3E3296ED5E30099D47B /* CityViewModel.swift in Sources */,
