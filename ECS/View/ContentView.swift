@@ -14,6 +14,7 @@ struct ContentView: View {
     var dataController: DataController
     
     var body: some View {
+       
         TabView
         {
             CityView(storeNation: storeNation,currentCity: storeNation.nations[0].city[0], countries: countries)
@@ -28,7 +29,9 @@ struct ContentView: View {
             {
                 Label("User", systemImage: "person")
             }
-        }
+        } .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(false)
+        
         
     }
 }

@@ -87,6 +87,7 @@ struct CityView: View {
                                         .cornerRadius(30)
                                         .frame(width: 360, height: 200)
                                         .opacity(0.85)
+                                        .shadow(color: .black, radius: 3)
                                     
                                     //Sh
                                     Text(storeNation.nations[0].city[0].quests[index].title)
