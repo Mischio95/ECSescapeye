@@ -7,6 +7,9 @@
 
 import Foundation
 
+let firstRegistration = "firstRegistration"
+let userDefaults = UserDefaults.standard
+
 var star = "Star"
 
 var newQuestN0 = Quest(title: "Pizza forever", description: "Go to Sorbillo and eat you're favourite pizza!", backgroundImage: "Napoli", difficultyLevel: [star], trophy: Trophy.bronze)

@@ -19,25 +19,32 @@ struct RegistrationView: View {
     @State var flagButton = false
     var body: some View {
         
-        // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
-        VStack(spacing: 60)
+        NavigationStack()
         {
-            NavigationStack()
+        // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
+            VStack(alignment:.leading, spacing: 1)
             {
-                
-                Text("Insert Username")
-                    .frame(alignment: .topLeading)
-                
+                Text("REGISTRATION")
+                    .frame(alignment: .leading)
+                    .font(.title2)
+                    .padding()
+                Text("Choose your Username")
+                    .font(.title3)
+                    .frame(alignment: .leading)
+                    .padding()
                 TextField("Username",text: $username)
                     .extensionTextFieldView(roundedCornes: 6, startColor: .white, endColor: .gray)
                     .padding(30)
-                    .navigationTitle("Registration")
-                
-               earth3D
-               userStorage
+                    .navigationTitle("NO NAME APP")
+            }
+                VStack
+                {
+                    earth3D
+                    userStorage
+                }
             }
         }
-    }
+    
     
     var earth3D : some View
     {
@@ -49,17 +56,6 @@ struct RegistrationView: View {
     
     var userStorage: some View
     {
-//        NavigationView
-//        {
-//            List(user)
-//            { users in
-//                NavigationLink{
-//                    Text(users.username ?? "")
-//                }label: {
-//                    Text(users.username ?? "")
-//                }
-//            }
-//        }
         HStack(spacing: 30){
          
             // BUTTON CORE DATA AND CHANGE VIEW
@@ -69,6 +65,7 @@ struct RegistrationView: View {
                 if(username != "")
                 {
                     flagButton = true
+                    UserDefaults.standard.set(true, forKey: "firstRegistration")
                     users.username = username
                     try? moc.save()
                     print(user)
@@ -86,6 +83,7 @@ struct RegistrationView: View {
                 }
             }.navigationBarBackButtonHidden(true)
 
+            // BUTTON TO SAVE DATA WITH USERDEAULT
             
             Button("UserDefeault")
             {
@@ -96,6 +94,7 @@ struct RegistrationView: View {
                     print(userDefaults.string(forKey: "username"))
                 }
             }
+            
             //                Button("Add in FileManager")
             //                {
             //                    if(username != "" && password != "")
