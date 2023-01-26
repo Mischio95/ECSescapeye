@@ -30,7 +30,7 @@ struct ContentView: View {
                 Label("User", systemImage: "person")
             }
         } .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(false)
+          .navigationBarHidden(false)
         
         
     }

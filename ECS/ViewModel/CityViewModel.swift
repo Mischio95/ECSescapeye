@@ -10,11 +10,13 @@ import Foundation
 let firstRegistration = "firstRegistration"
 let userDefaults = UserDefaults.standard
 
+
+
 var star = "Star"
 
 var newQuestN0 = Quest(title: "Pizza forever", description: "Go to Sorbillo and eat you're favourite pizza!", backgroundImage: "Napoli", difficultyLevel: [star], trophy: Trophy.bronze)
-var newQuestN1 = Quest(title: "sfogliatella is the best", description: "Eat sfogliatella in Pintauro", backgroundImage: "Napoli", difficultyLevel: [star,star], trophy: Trophy.bronze)
-var newQuestN2 = Quest(title: "Sant'Elmo's way", description: "visit castel Sant'Elmo", backgroundImage: "Napoli", difficultyLevel: [star,star], trophy: Trophy.silver)
+var newQuestN1 = Quest(title: "Sfogliatella is the best", description: "Eat sfogliatella in Pintauro", backgroundImage: "Napoli", difficultyLevel: [star,star], trophy: Trophy.bronze)
+var newQuestN2 = Quest(title: "Sant'Elmo's way", description: "Visit castel Sant'Elmo", backgroundImage: "Napoli", difficultyLevel: [star,star], trophy: Trophy.silver)
 var newQuestN3 = Quest(title: "Big Culture!", description: "Visit the Man!", backgroundImage: "Napoli", difficultyLevel: [star,star,star,star,star], trophy: Trophy.gold)
 
 var napoli = City(name: "Napoli", description: "A città chiù bella do munno!", background: "Napoli", quests: [newQuestN0, newQuestN1, newQuestN2,newQuestN3])

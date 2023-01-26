@@ -28,14 +28,14 @@ struct CityView: View {
                 .position(x: 150, y: 100)
             questButtons
             
-            if let nations = countries.nation
-            {
-                Text(nations[0].name)
-            }
-            else
-            {
-                Text("NoLoad")
-            }
+//            if let nations = countries.nation
+//            {
+//                Text(nations[0].name)
+//            }
+//            else
+//            {
+//                Text("NoLoad")
+//            }
             
 //            Button {
 //                Task {
@@ -65,8 +65,7 @@ struct CityView: View {
                     .fill(.black)
                     .frame(width: 480, height: 600)
             }
-            
-            
+   
             ZStack
             {
                 ScrollView(showsIndicators: false)
@@ -93,7 +92,7 @@ struct CityView: View {
                                     Text(storeNation.nations[0].city[0].quests[index].title)
                                         .foregroundColor(.black)
                                         .bold()
-                                        .position(x: 180,y: 30)
+                                        .position(x: 210,y: 30)
                                     
                                     HStack(spacing: 20)
                                     {
@@ -109,7 +108,7 @@ struct CityView: View {
                             }
                         }
                     }
-                }.padding(80)
+                }.padding(30)
             }
         }
     }

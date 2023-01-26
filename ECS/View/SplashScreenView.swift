@@ -18,7 +18,7 @@ struct SplashScreenView: View {
         {
             
             // HO DICHIARATO DELLE VARIABILI GLOBALI IN CITYVIEWMODEL E SETTO CON USERDEFAULT NELLA REGISTRATION VIEW UNA BOOL PER CONTROLLARE SE E' IL PRIMO ACCESSO O MENO PER EVITARE DI FAR REGISTRARE L'UTENTE PIU VOLTE
-            
+
             if ((userDefaults.bool(forKey: firstRegistration) == false))
             {
                 RegistrationView(dataController: dataController)
@@ -27,6 +27,8 @@ struct SplashScreenView: View {
             {
                 ContentView(dataController: dataController)
             }
+            
+            //RegistrationView(dataController: dataController)
             ZStack
             {
                 Image("Splash")
