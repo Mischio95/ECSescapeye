@@ -8,8 +8,8 @@
 import Foundation
 
 
-//struct User
-//{
-//    var name: String = ""
-//    var image: String = ""
-//}
+struct User1
+{
+    var username: String = ""
+    var password: String = ""
+}

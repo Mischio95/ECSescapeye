@@ -15,7 +15,9 @@ struct RegistrationView: View {
     @Environment(\.managedObjectContext) var moc
     @State var username = ""
     @State var password = ""
-    var test: String = "Ciao"
+    let userDefaults = UserDefaults.standard
+    @State var user1 = userDefaults.string(forKey: username)
+    
     
     
     
@@ -49,7 +51,7 @@ struct RegistrationView: View {
             
             HStack(spacing: 30){
                 
-                Button("Add") {
+                Button("Add in CoreData") {
                     let users = User(context: moc)
                     if(username != "" && password != "")
                     {
@@ -59,14 +61,27 @@ struct RegistrationView: View {
                         try? moc.save()
                         print(user)
                     }
-                    
-                   
-//                    let chosenFirstName = username.randomElement()!
-//                    let users = User(context: moc)
-//                    users.username = "\(chosenFirstName)"
-                    
-//                    try? moc.save()
+                }
                 
+                Button("Add in UserDefeault")
+                {
+                    
+                    if(username != "" && password != "")
+                    {
+//                        user1.username = username
+//                        user1.password = password
+                        userDefaults.set(username, forKey: "username")
+                        userDefaults.set(password, forKey: "password")
+                        
+                        print(userDefaults.string(forKey: "username"))
+                    }
+                }
+                Button("Add in FileManager")
+                {
+                    if(username != "" && password != "")
+                    {
+                        
+                    }
                 }
                 
             }
