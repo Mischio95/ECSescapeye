@@ -19,47 +19,45 @@ struct RegistrationView: View {
     @State var flagButton = false
     var body: some View {
         
-        // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
-        VStack(spacing: 60)
+        NavigationStack()
         {
-            NavigationStack()
+        // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
+            VStack(alignment:.leading)
             {
-                
-                Text("Insert Username")
-                    .frame(alignment: .topLeading)
-                
+                Text("REGISTRATION")
+                    .frame(alignment: .leading)
+                    .font(.title2)
+                    .padding()
+        
+                Text("Choose your Username")
+                    .font(.title3)
+                    .frame(alignment: .leading)
+                    .padding()
+            
                 TextField("Username",text: $username)
                     .extensionTextFieldView(roundedCornes: 6, startColor: .white, endColor: .gray)
                     .padding(30)
-                    .navigationTitle("Registration")
-                
-               earth3D
-               userStorage
+                    .navigationTitle("NO NAME APP")
+                    
+            }
+                VStack
+                {
+                    earth3D
+                    userStorage
+                }
             }
         }
-    }
+    
     
     var earth3D : some View
     {
         SceneView(scene: SCNScene(named: "planet1.usdz"),options: [.autoenablesDefaultLighting,.allowsCameraControl])
             .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height / 3)
-            
         
     }
     
     var userStorage: some View
     {
-//        NavigationView
-//        {
-//            List(user)
-//            { users in
-//                NavigationLink{
-//                    Text(users.username ?? "")
-//                }label: {
-//                    Text(users.username ?? "")
-//                }
-//            }
-//        }
         HStack(spacing: 30){
          
             // BUTTON CORE DATA AND CHANGE VIEW
@@ -69,6 +67,7 @@ struct RegistrationView: View {
                 if(username != "")
                 {
                     flagButton = true
+                    UserDefaults.standard.set(true, forKey: "firstRegistration")
                     users.username = username
                     try? moc.save()
                     print(user)
@@ -86,25 +85,62 @@ struct RegistrationView: View {
                 }
             }.navigationBarBackButtonHidden(true)
 
+            // BUTTON TO SAVE DATA WITH USERDEAULT
             
-            Button("UserDefeault")
+            Button(action:
             {
+                flagButton = true
+                UserDefaults.standard.set(true, forKey: "firstRegistration")
                 var user1 = userDefaults.string(forKey: username)
                 if(username != "")
                 {
                     userDefaults.set(username, forKey: "username")
                     print(userDefaults.string(forKey: "username"))
                 }
-            }
-            //                Button("Add in FileManager")
-            //                {
-            //                    if(username != "" && password != "")
-            //                    {
-            //
-            //                    }
-            //                }
-            //
+            },label:
+            {
+                Text("UserDefeault")
+            })
+            
+            Button(action:
+            {
+                flagButton = true
+                UserDefaults.standard.set(true, forKey: "firstRegistration")
+               
+                if(username != "")
+                {
+                    let str = username
+                    let url = getDocumentsDirectory().appendingPathComponent("database.txt")
+                    do {
+                        try str.write(to: url, atomically: true, encoding: .utf8)
+                        let input = try String(contentsOf: url)
+                        print(input)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            },label:
+            {
+                Text("FileManager")
+            })
         }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        // find all possible documents directories for this user
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+
+        do {
+            let items = try FileManager.default.contentsOfDirectory(atPath: "Documents")
+
+            for item in items {
+                print("Found \(item)")
+            }
+        } catch {
+            print(error)
+        }
+        // just send back the first one, which ought to be the only one
+        return paths[0]
     }
 }
 

@@ -12,10 +12,23 @@ struct SplashScreenView: View {
     @State var animate = false
     @State var end = false
     var dataController: DataController
+    
     var body: some View {
         ZStack
         {
-            RegistrationView(dataController: dataController)
+            
+            // HO DICHIARATO DELLE VARIABILI GLOBALI IN CITYVIEWMODEL E SETTO CON USERDEFAULT NELLA REGISTRATION VIEW UNA BOOL PER CONTROLLARE SE E' IL PRIMO ACCESSO O MENO PER EVITARE DI FAR REGISTRARE L'UTENTE PIU VOLTE
+
+            if ((userDefaults.bool(forKey: firstRegistration) == false))
+            {
+                RegistrationView(dataController: dataController)
+            }
+            else
+            {
+                ContentView(dataController: dataController)
+            }
+            
+            //RegistrationView(dataController: dataController)
             ZStack
             {
                 Image("Splash")
@@ -23,15 +36,6 @@ struct SplashScreenView: View {
                     .edgesIgnoringSafeArea(.all)
                     .scaleEffect(animate ? 4 : 1 )
                     .frame(width: UIScreen.main.bounds.width)
-
-//                Image(systemName: "plus")
-//                    .resizable()
-//                    .renderingMode(.original)
-//                    .aspectRatio(contentMode: .fit)
-//                    .frame(width: 150,height: 150,alignment: .center)
-//                    .scaleEffect(animate ? 4 : 1 )
-//                    .frame(width: UIScreen.main.bounds.width)
-                
             }.ignoresSafeArea(.all,edges: .all)
                 .onAppear(perform: {
                     animateSplash()
@@ -39,7 +43,7 @@ struct SplashScreenView: View {
                 .opacity(end ? 0 : 2)
         }
     }
-    
+        
     func animateSplash()
     {
         
