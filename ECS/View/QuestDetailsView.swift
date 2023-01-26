@@ -37,7 +37,7 @@ struct QuestDetailsView: View {
                     .offset(CGSize(width: 50, height: -130))
                     .padding()
                 
-                Image("Napoli")
+                Image(quest.backgroundImage)
                     .resizable()
                     .cornerRadius(30)
                     .opacity(0.85)

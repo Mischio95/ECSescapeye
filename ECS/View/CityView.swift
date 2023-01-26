@@ -81,11 +81,11 @@ struct CityView: View {
                             {
                                 ZStack
                                 {
-                                    Image("Napoli")
+                                    Image(storeNation.nations[0].city[0].quests[index].backgroundImage)
                                         .resizable()
                                         .cornerRadius(30)
                                         .frame(width: 360, height: 200)
-                                        .opacity(0.85)
+                                        .opacity(0.65)
                                         .shadow(color: .black, radius: 3)
                                     
                                     //Sh
