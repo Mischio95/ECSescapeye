@@ -59,7 +59,7 @@ struct UserView: View {
             {
                 VStack(spacing: 5)
                 {
-                    Text("Nome Utente")
+                    Text(user1.username)
                         .bold()
                         .font(.body)
                         .foregroundColor(.secondary)
