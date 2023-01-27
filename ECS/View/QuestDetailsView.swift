@@ -36,14 +36,16 @@ struct QuestDetailsView: View {
                 Text(quest.description)
                     .offset(CGSize(width: 50, height: -130))
                     .padding()
+                    .fixedSize(horizontal: false, vertical: true)
+
                 
-                Image("Napoli")
+                Image(quest.backgroundImage)
                     .resizable()
                     .cornerRadius(30)
                     .opacity(0.85)
                     .shadow(color: .black, radius: 3)
                     .frame(width: 360,height: 300)
-                    .offset(CGSize(width: 50, height: -100))
+                    .offset(CGSize(width: 50, height: -150))
                     .padding()
             }
             

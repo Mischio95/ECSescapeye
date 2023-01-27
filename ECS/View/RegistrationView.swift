@@ -17,38 +17,46 @@ struct RegistrationView: View {
     @State var username = ""
     let userDefaults = UserDefaults.standard
     @State var flagButton = false
+    var body: some View
+    {
     
-    
-    var body: some View {
         
         NavigationStack()
         {
-        // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
-            VStack(alignment:.leading)
+            ZStack
             {
-                Text("REGISTRATION")
-                    .frame(alignment: .leading)
-                    .font(.title2)
-                    .padding()
-        
-                Text("Choose your Username")
-                    .font(.title3)
-                    .frame(alignment: .leading)
-                    .padding()
-            
-                TextField("Username",text: $username)
-                    .extensionTextFieldView(roundedCornes: 6, startColor: .white, endColor: .gray)
-                    .padding(30)
-                    .navigationTitle("NO NAME APP")
-                    
-            }
-                VStack
+
+                ZStack
                 {
-                    earth3D
-                    userStorage
+                // SE FINISCE LA REGISTRAZIONE CHIAMA LA CONTENTVIEW
+                    VStack(alignment:.leading)
+                    {
+                        Text("REGISTRATION")
+                            .frame(alignment: .leading)
+                            .font(.title2)
+                            .padding()
+                
+                        Text("Choose your Username")
+                            .font(.title3)
+                            .frame(alignment: .leading)
+                            .padding()
+                    
+                        TextField("Username",text: $username)
+                            .extensionTextFieldView(roundedCornes: 6, startColor: .white, endColor: .gray)
+                            .padding(30)
+                            .navigationTitle("NO NAME APP")
+                        VStack
+                        {
+                            earth3D
+                            userStorage
+                        }
+                    }
                 }
+                            
             }
+        
         }
+    }
     
     
     var earth3D : some View

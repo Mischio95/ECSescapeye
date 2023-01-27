@@ -26,6 +26,7 @@ struct CityView: View {
                 .frame(width: 800,height: 500, alignment: .topLeading)
                 .ignoresSafeArea()
                 .position(x: 150, y: 100)
+                .opacity(0.9)
             questButtons
             
 //            if let nations = countries.nation
@@ -63,9 +64,12 @@ struct CityView: View {
             {
                 RoundedRectangle(cornerRadius: 70, style: .continuous)
                     .fill(.black)
-                    .frame(width: 480, height: 600)
+                    .frame(width: 480, height: 500)
             }
-   
+            Text("Your Quests:")
+                .font(.title)
+                .bold()
+                .offset(CGSize(width: -97, height: -300))
             ZStack
             {
                 ScrollView(showsIndicators: false)
@@ -81,27 +85,33 @@ struct CityView: View {
                             {
                                 ZStack
                                 {
-                                    Image("Napoli")
-                                        .resizable()
+                                    Rectangle()
                                         .cornerRadius(30)
-                                        .frame(width: 360, height: 200)
-                                        .opacity(0.85)
+                                        .frame(width: 370, height: 210)
                                         .shadow(color: .black, radius: 3)
-                                    
-                                    //Sh
-                                    Text(storeNation.nations[0].city[0].quests[index].title)
-                                        .foregroundColor(.black)
-                                        .bold()
-                                        .position(x: 210,y: 30)
-                                    
-                                    HStack(spacing: 20)
-                                    {
-                                        ForEach(0..<storeNation.nations[0].city[0].quests[index].difficultyLevel.count)
+                                    ZStack{
+                                        Image(storeNation.nations[0].city[0].quests[index].backgroundImage)
+                                            .resizable()
+                                            .cornerRadius(30)
+                                            .frame(width: 360, height: 200)
+                                            .opacity(0.65)
+                                            .shadow(color: .black, radius: 3)
+                                        
+                                        //Sh
+                                        Text(storeNation.nations[0].city[0].quests[index].title)
+                                            .foregroundColor(.white)
+                                            .bold()
+                                            .position(x: 210,y: 30)
+                                        
+                                        HStack(spacing: 20)
                                         {
-                                            index1 in
-                                            Image(storeNation.nations[0].city[0].quests[index].difficultyLevel[index1])
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
+                                            ForEach(0..<storeNation.nations[0].city[0].quests[index].difficultyLevel.count)
+                                            {
+                                                index1 in
+                                                Image(storeNation.nations[0].city[0].quests[index].difficultyLevel[index1])
+                                                    .resizable()
+                                                    .frame(width: 50, height: 50)
+                                            }
                                         }
                                     }
                                 }
