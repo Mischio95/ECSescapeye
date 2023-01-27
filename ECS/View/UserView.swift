@@ -16,6 +16,7 @@ struct UserView: View {
     @State var isPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State var userFetch: [String]?
     
     var body: some View {
         
@@ -25,11 +26,13 @@ struct UserView: View {
             {
                 ZStack(alignment: .top)
                 {
-                    Rectangle()
-                        .foregroundColor(Color.blue)
+    
+                    Image("user")
+                        .resizable()
+                        .frame(width: 600,height: 230)
                         .edgesIgnoringSafeArea(.top)
-                        .frame(height: 100)
-                   
+                        .offset(CGSize(width: 20, height: -40))
+                        
                     Button
                     {
                         isPresenting.toggle()
@@ -38,18 +41,35 @@ struct UserView: View {
                         {
                             if let uiImage = self.uiImage
                             {
+                                Circle()
+                                    .edgesIgnoringSafeArea(.top)
+                                    .frame(height: 150)
+                                    .offset(CGSize(width: -100, height: 80))
+                                    .shadow(color: .black, radius: 6)
                                 Image(uiImage: uiImage)
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 140, height: 140)
+                                    .frame(width: 130, height: 130)
                                     .cornerRadius(80)
+                                    .offset(CGSize(width: -100, height: -67))
+                                    .shadow(color: .black, radius: 6)
                             }
                             else
                             {
-                                Image(systemName: "person.fill")
-                                    .font(.system(size: 80))
+                                Circle()
+                                    .edgesIgnoringSafeArea(.top)
+                                    .frame(height: 150)
+                                    .offset(CGSize(width: -100, height: 60))
+                                    .shadow(color: .black, radius: 6)
+                                Image(systemName: "plus")
+                                    .font(.system(size: 30))
                                     .padding()
+                                    .colorInvert()
                                     .foregroundColor(Color(.label))
+                                    .scaledToFill()
+                                    .frame(width: 140, height: 30)
+                                    .cornerRadius(80)
+                                    .offset(CGSize(width: -100, height: -40))
                             }
                         }
                     }
@@ -59,36 +79,52 @@ struct UserView: View {
             {
                 VStack(spacing: 5)
                 {
-                    Text("Nome Utente")
+//                    Button("Load Name")
+//                    {
+//                        do{
+//                            ForEach(user, id: \.self)
+//                            {users in
+//                                userFetch?.append(users.username ?? "")
+//                            }
+//                        } catch
+//                        {
+//                            print(error)
+//                        }
+//                    }
+                    Text(userFetch?[0] ?? "No Name")
                         .bold()
                         .font(.body)
-                        .foregroundColor(.secondary)
-                }.padding()
+                        .foregroundColor(Color(.label))
+                        .offset(CGSize(width: 75, height: -108))
+                        .fixedSize()
+                }
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .fullScreenCover(isPresented: $isPresenting, onDismiss: nil) {
                 ImagePicker(uiImage: $uiImage)
             }
-//            List(user)
-//            { users in
-//                Text(users.username ?? "")
-//            }
-//
-//
-//            Button("Add") {
-//                let username = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-//                let chosenFirstName = username.randomElement()!
-//                let users = User(context: moc)
-//                users.username = "\(chosenFirstName)"
-//
-//                try? moc.save()
-//            }
         }
+        .offset(CGSize(width: 0, height: -230))
     }
 }
 
+//func fetchUserCoreData()
+//{
+//    do{
+//        ForEach(user, id: \.self)
+//        {
+//            users in
+//            userFetch?.append(users.username ?? "")
+//        }
+//    } catch
+//    {
+//        print(error)
+//    }
+//}
+
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
+        
         UserView(storeNation: StoreData(),dataController: DataController())
     }
 }
