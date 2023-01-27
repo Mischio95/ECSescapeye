@@ -11,7 +11,6 @@ let firstRegistration = "firstRegistration"
 let userDefaults = UserDefaults.standard
 var user1 = User1(username: "")
 
-
 var star = "Star"
 
 var newQuestN0 = Quest(title: "Pizza forever", description: "Go to Sorbillo and eat you're favourite pizza!", backgroundImage: "pizza", difficultyLevel: [star], trophy: Trophy.bronze)
