@@ -17,6 +17,8 @@ struct RegistrationView: View {
     @State var username = ""
     let userDefaults = UserDefaults.standard
     @State var flagButton = false
+    
+    
     var body: some View {
         
         NavigationStack()
@@ -70,6 +72,7 @@ struct RegistrationView: View {
                     UserDefaults.standard.set(true, forKey: "firstRegistration")
                     users.username = username
                     try? moc.save()
+                    user1.username = username
                     print(user)
                 }
             },label:

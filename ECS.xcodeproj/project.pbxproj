@@ -13,6 +13,7 @@
 		83AFD3DC296EC8970099D47B /* Naciest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DB296EC8970099D47B /* Naciest.swift */; };
 		83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DF296ECD940099D47B /* Utilities.swift */; };
 		83AFD3E3296ED5E30099D47B /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3E2296ED5E30099D47B /* CityViewModel.swift */; };
+		83C005662983C03D001B2BC0 /* AppInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C005652983C03D001B2BC0 /* AppInstance.swift */; };
 		A735ED3A297055C3000EE311 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A735ED39297055C3000EE311 /* UserView.swift */; };
 		A735ED3C2970B6C7000EE311 /* QuestDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A735ED3B2970B6C7000EE311 /* QuestDetailsView.swift */; };
 		A795866E296D7211009EABB1 /* ECSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795866D296D7211009EABB1 /* ECSApp.swift */; };
@@ -55,6 +56,7 @@
 		83AFD3DB296EC8970099D47B /* Naciest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Naciest.swift; path = ECS/Model/Naciest.swift; sourceTree = SOURCE_ROOT; };
 		83AFD3DF296ECD940099D47B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		83AFD3E2296ED5E30099D47B /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		83C005652983C03D001B2BC0 /* AppInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstance.swift; sourceTree = "<group>"; };
 		A735ED39297055C3000EE311 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A735ED3B2970B6C7000EE311 /* QuestDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsView.swift; sourceTree = "<group>"; };
 		A795866A296D7211009EABB1 /* ECS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 				83AFD3DB296EC8970099D47B /* Naciest.swift */,
 				83AFD3DF296ECD940099D47B /* Utilities.swift */,
 				8351857E2970990F004CC2BC /* User.swift */,
+				83C005652983C03D001B2BC0 /* AppInstance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */,
 				A7E3239C298025F2003745BD /* RegistrationView.swift in Sources */,
 				83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */,
+				83C005662983C03D001B2BC0 /* AppInstance.swift in Sources */,
 				A735ED3C2970B6C7000EE311 /* QuestDetailsView.swift in Sources */,
 				83AFD3E3296ED5E30099D47B /* CityViewModel.swift in Sources */,
 				A735ED3A297055C3000EE311 /* UserView.swift in Sources */,

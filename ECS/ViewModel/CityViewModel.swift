@@ -9,7 +9,7 @@ import Foundation
 
 let firstRegistration = "firstRegistration"
 let userDefaults = UserDefaults.standard
-
+var user1 = User1(username: "")
 
 
 var star = "Star"
