@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CityView: View {
-    @ObservedObject var storeNation =  StoreData()
+    @ObservedObject var storeNation =  CityViewModel()
     @Environment(\.colorScheme) var colorScheme
     var currentCity: City
     @ObservedObject var countries: CountriesData
@@ -58,13 +58,13 @@ struct CityView: View {
             {
                 RoundedRectangle(cornerRadius: 70, style: .continuous)
                     .fill(.white)
-                    .frame(width: 480, height: 500)
+                    .frame(width: 480, height: 530)
             }
             if colorScheme == .dark
             {
                 RoundedRectangle(cornerRadius: 70, style: .continuous)
                     .fill(.black)
-                    .frame(width: 480, height: 500)
+                    .frame(width: 480, height: 530)
             }
             Text("Your Quests:")
                 .font(.title)
@@ -138,6 +138,6 @@ struct CityView: View {
 struct CityView_Previews: PreviewProvider {
     static var previews: some View {
         var city = City(name: "Napoli", description: "", background: "Napoli", quests: [])
-        CityView(storeNation: StoreData(), currentCity: city, countries: CountriesData())
+        CityView(storeNation: CityViewModel(), currentCity: city, countries: CountriesData())
     }
 }

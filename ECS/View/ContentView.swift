@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var storeNation = StoreData()
+    @ObservedObject var storeNation = CityViewModel()
     @ObservedObject var countries = CountriesData()
     var dataController: DataController
     
@@ -29,8 +29,7 @@ struct ContentView: View {
             {
                 Label("User", systemImage: "person")
             }
-        } .navigationBarBackButtonHidden(true)
-          .navigationBarHidden(false)
+        } 
         
         
     }
@@ -39,6 +38,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View
     {
-        ContentView(storeNation: StoreData(), dataController: DataController())
+        ContentView(storeNation: CityViewModel(), dataController: DataController())
     }
 }

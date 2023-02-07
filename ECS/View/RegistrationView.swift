@@ -11,7 +11,7 @@ import SceneKit
 struct RegistrationView: View {
     
     var dataController: DataController
-    @ObservedObject var storeNation = StoreData()
+    @ObservedObject var storeNation = CityViewModel()
     @FetchRequest(sortDescriptors: []) var user: FetchedResults<User>
     @Environment(\.managedObjectContext) var moc
     @State var username = ""

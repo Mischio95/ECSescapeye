@@ -7,9 +7,7 @@
 
 import Foundation
 
-let firstRegistration = "firstRegistration"
-let userDefaults = UserDefaults.standard
-var user1 = User1(username: "")
+
 
 var star = "Star"
 
@@ -26,15 +24,16 @@ var torino = City(name: "Torino", description: "Città di Torino", background: "
 var italy = Nation(name: "Italy", backgroundImage: "Italy", city: [napoli, mialno, torino])
 var holland = Nation(name: "Holland", backgroundImage: "Holland", city: [napoli, mialno, torino])
 
-class StoreData: ObservableObject
+class CityViewModel: ObservableObject
 {
     @Published var nations: [Nation] = [italy, holland]
-    @Published var cityApi: CityApi?
+    @Published var nationsForApi: [String] = ["Italy","Germany","Holland","United States"]
+    @Published var cityApi: CountriesAPIElements?
     var user = User()
 }
 
 //MARK: USER VIEW
-extension StoreData
+extension CityViewModel
 {
     func showVisitatedNations()
     {
@@ -93,7 +92,7 @@ extension StoreData
 
 
 //MARK: MAIN PAGE
-extension StoreData
+extension CityViewModel
 {
     func showAllNations()
     {

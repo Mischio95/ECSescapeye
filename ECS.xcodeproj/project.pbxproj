@@ -10,7 +10,7 @@
 		8351857F2970990F004CC2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351857E2970990F004CC2BC /* User.swift */; };
 		83725498297FED4600B5E815 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83725497297FED4600B5E815 /* DataController.swift */; };
 		8372549C297FEDEA00B5E815 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8372549A297FEDEA00B5E815 /* UserModel.xcdatamodeld */; };
-		83AFD3DC296EC8970099D47B /* Naciest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DB296EC8970099D47B /* Naciest.swift */; };
+		83AFD3DC296EC8970099D47B /* Nations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DB296EC8970099D47B /* Nations.swift */; };
 		83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3DF296ECD940099D47B /* Utilities.swift */; };
 		83AFD3E3296ED5E30099D47B /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFD3E2296ED5E30099D47B /* CityViewModel.swift */; };
 		83C005662983C03D001B2BC0 /* AppInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C005652983C03D001B2BC0 /* AppInstance.swift */; };
@@ -25,6 +25,7 @@
 		A795868B296D7211009EABB1 /* ECSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795868A296D7211009EABB1 /* ECSUITestsLaunchTests.swift */; };
 		A7958698296D721A009EABB1 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958697296D721A009EABB1 /* CityView.swift */; };
 		A795869A296D725A009EABB1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7958699296D725A009EABB1 /* SplashScreenView.swift */; };
+		A7A7EA942991090D00E9F9CE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7EA932991090D00E9F9CE /* File.swift */; };
 		A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */; };
 		A7E1123C2982BA7200B542A4 /* planet.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A7E1123B2982BA7200B542A4 /* planet.usdz */; };
 		A7E1123E2982BB2B00B542A4 /* planet1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A7E1123D2982BB2B00B542A4 /* planet1.usdz */; };
@@ -53,7 +54,7 @@
 		8351857E2970990F004CC2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		83725497297FED4600B5E815 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8372549B297FEDEA00B5E815 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
-		83AFD3DB296EC8970099D47B /* Naciest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Naciest.swift; path = ECS/Model/Naciest.swift; sourceTree = SOURCE_ROOT; };
+		83AFD3DB296EC8970099D47B /* Nations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Nations.swift; path = ECS/Model/Nations.swift; sourceTree = SOURCE_ROOT; };
 		83AFD3DF296ECD940099D47B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		83AFD3E2296ED5E30099D47B /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		83C005652983C03D001B2BC0 /* AppInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstance.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		A795868A296D7211009EABB1 /* ECSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A7958697296D721A009EABB1 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		A7958699296D725A009EABB1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		A7A7EA932991090D00E9F9CE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAPIViewModel.swift; sourceTree = "<group>"; };
 		A7E1123B2982BA7200B542A4 /* planet.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planet.usdz; sourceTree = "<group>"; };
 		A7E1123D2982BB2B00B542A4 /* planet1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planet1.usdz; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				83AFD3E2296ED5E30099D47B /* CityViewModel.swift */,
 				A7A844BB2976FC4F00E4576F /* CountriesAPIViewModel.swift */,
+				A7A7EA932991090D00E9F9CE /* File.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -193,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				A7958699296D725A009EABB1 /* SplashScreenView.swift */,
-				A7E3239B298025F2003745BD /* RegistrationView.swift */,
 				A795866F296D7211009EABB1 /* ContentView.swift */,
+				A7E3239B298025F2003745BD /* RegistrationView.swift */,
 				A7958697296D721A009EABB1 /* CityView.swift */,
 				A735ED39297055C3000EE311 /* UserView.swift */,
 				A735ED3B2970B6C7000EE311 /* QuestDetailsView.swift */,
@@ -205,7 +208,7 @@
 		A795869C296D75B7009EABB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				83AFD3DB296EC8970099D47B /* Naciest.swift */,
+				83AFD3DB296EC8970099D47B /* Nations.swift */,
 				83AFD3DF296ECD940099D47B /* Utilities.swift */,
 				8351857E2970990F004CC2BC /* User.swift */,
 				83C005652983C03D001B2BC0 /* AppInstance.swift */,
@@ -382,11 +385,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83AFD3DC296EC8970099D47B /* Naciest.swift in Sources */,
+				83AFD3DC296EC8970099D47B /* Nations.swift in Sources */,
 				83725498297FED4600B5E815 /* DataController.swift in Sources */,
 				A7A844BC2976FC4F00E4576F /* CountriesAPIViewModel.swift in Sources */,
 				A7E3239C298025F2003745BD /* RegistrationView.swift in Sources */,
 				83AFD3E0296ECD940099D47B /* Utilities.swift in Sources */,
+				A7A7EA942991090D00E9F9CE /* File.swift in Sources */,
 				83C005662983C03D001B2BC0 /* AppInstance.swift in Sources */,
 				A735ED3C2970B6C7000EE311 /* QuestDetailsView.swift in Sources */,
 				83AFD3E3296ED5E30099D47B /* CityViewModel.swift in Sources */,

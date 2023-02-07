@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestDetailsView: View {
-    var storeNation: StoreData
+    var storeNation: CityViewModel
     @State var quest: Quest
    
    
@@ -48,17 +48,14 @@ struct QuestDetailsView: View {
                     .offset(CGSize(width: 50, height: -150))
                     .padding()
             }
-            
-            
         }
-
     }
 }
 
 struct QuestDetailsView_Previews: PreviewProvider {
     static var previews: some View {
 //        var quest = Quest(title: "Napoli", description: "sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck sono di napoli fuck", backgroundImage: "Napoli", difficultyLevel: ["Star","Star"], trophy: .bronze)
-//        QuestDetailsView(storeNation: StoreData(), quest: quest)
-        QuestDetailsView(storeNation: StoreData(), quest: Quest(title: "", description: "", backgroundImage: "", difficultyLevel: [""], trophy: .bronze))
+//        QuestDetailsView(storeNation: CityViewModel(), quest: quest)
+        QuestDetailsView(storeNation: CityViewModel(), quest: Quest(title: "", description: "", backgroundImage: "", difficultyLevel: [""], trophy: .bronze))
     }
 }

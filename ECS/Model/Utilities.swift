@@ -7,6 +7,8 @@
 
 import Foundation
 
-class Utilities
-{
-}
+let firstRegistration = "firstRegistration"
+
+let userDefaults = UserDefaults.standard
+
+var user1 = User1(username: "")

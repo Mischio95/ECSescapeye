@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserView: View {
     
-    @ObservedObject var storeNation = StoreData()
+    @ObservedObject var storeNation = CityViewModel()
     var dataController: DataController
     @FetchRequest(sortDescriptors: []) var user: FetchedResults<User>
     @Environment(\.managedObjectContext) var moc
@@ -17,6 +17,7 @@ struct UserView: View {
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State var userFetch: [String]?
+    
     
     var body: some View {
         
@@ -113,7 +114,7 @@ struct UserView: View {
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         
-        UserView(storeNation: StoreData(),dataController: DataController())
+        UserView(storeNation: CityViewModel(),dataController: DataController())
     }
 }
 
